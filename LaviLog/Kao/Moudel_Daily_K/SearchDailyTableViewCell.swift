@@ -15,6 +15,7 @@ class SearchDailyTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var answerTextView: UITextView!
     
+    @IBOutlet weak var questionTextFiled: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
