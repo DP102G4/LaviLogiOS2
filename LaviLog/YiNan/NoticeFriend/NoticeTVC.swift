@@ -86,7 +86,7 @@ class NoticeTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      tableView.deselectRow(at: indexPath, animated: false)
+      tableView.deselectRow(at: indexPath, animated: false) // 關閉點選灰色
     }
     
     

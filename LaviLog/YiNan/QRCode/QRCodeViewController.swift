@@ -1,6 +1,6 @@
 //
 //  QRCodeViewController.swift
-//  QRcodeOpen
+//  LaviLog
 //
 //  Created by 田乙男 on 2019/11/25.
 //  Copyright © 2019 張哲禎. All rights reserved.

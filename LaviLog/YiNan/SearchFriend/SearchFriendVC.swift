@@ -120,7 +120,7 @@ extension SearchFriendVC: UITableViewDataSource, UITableViewDelegate {
         searchFriendResultVC.images = images
         self.navigationController?.pushViewController(searchFriendResultVC, animated: true)
         
-        tableView.deselectRow(at: indexPath, animated: false)
+        tableView.deselectRow(at: indexPath, animated: false) // 關閉點選灰色
     }
     
     /* 設定可否編輯資料列 */
