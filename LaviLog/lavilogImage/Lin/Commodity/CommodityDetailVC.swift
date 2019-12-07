@@ -18,7 +18,7 @@ class CommodityDetailVC: UIViewController {
     var images = [String: UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ivCommodity.image = images[commodity.imageUrl]
         nameLabel.text = "name: \(commodity.productName)"
         infoLabel.text = "info: \(commodity.productInfo)"
         priceLabel.text = "price: \(String(commodity.productPrice))"
