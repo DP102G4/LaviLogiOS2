@@ -11,16 +11,24 @@ import Firebase
 
 class GenQRCodeVC: UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
+    // 標題 ＸＸＸ 的 QR Code
+    @IBOutlet weak var lbTitle: UILabel!
+    // QR Code的圖
     @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var button: UIButton!
+    // 說明暫時用不到
     @IBOutlet weak var label: UILabel!
     
+    
     var db: Firestore!
+    
+    // 實體化一個Users物件
     var user = Users()
     
     override func viewDidLoad() {
+        
+        // 標題圓角設定
+        lbTitle.layer.cornerRadius = 10
+        lbTitle.layer.masksToBounds = true
         
         if let account = Auth.auth().currentUser!.email {
             db = Firestore.firestore()
@@ -41,6 +49,8 @@ class GenQRCodeVC: UIViewController {
             // 將CIImage轉成UIImage顯示
             let uiImage = UIImage(ciImage: ciImage_largeQR)
             imageView.image = uiImage
+            
+            print("QRCode:",account)
         }
     }
     
@@ -51,7 +61,10 @@ class GenQRCodeVC: UIViewController {
             if let snapshot = snapshot {
                 for document in snapshot.documents {
                     self.user = Users(dic: document.data())
-                    //self.lbName.text = self.user.name!
+                    //let textT = self.user.name!
+                    
+                    // 標題改文字 使用者名稱
+                    self.lbTitle.text = "\(self.user.name!) 的 QR Code"
                 }
             }
         }
@@ -61,14 +74,14 @@ class GenQRCodeVC: UIViewController {
     
     @IBAction func clickGenerate(_ sender: Any) {
         let text = "tasi@gmail.com"
-        textField.text = text
-        button.titleLabel?.text = "21"
+        
         //        let text = textField.text == nil ? "" : textField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         //        if text.isEmpty {
         //            imageView.image = nil
         //            textField.text = ""
         //            return
         //        }
+        
         // 將文字轉成Data，編碼採ASCII
         let data = text.data(using: String.Encoding.ascii)
         // 建立CIFilter物件，準備產生QR code
@@ -86,7 +99,48 @@ class GenQRCodeVC: UIViewController {
         imageView.image = uiImage
     }
     
-    @IBAction func didEndOnExit(_ sender: Any) { }
+    // 返回前一頁
+    @IBAction func btClose(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // 分享按鈕
+    @IBAction func btShare(_ sender: Any) {
+        
+        // activityItems 陣列中放入我們想要使用的元件，這邊我們放入使用者圖片、使用者名稱及個人部落格。
+        // 這邊因為我們確認裡面有值，所以使用驚嘆號強制解包。
+        let activityVC = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
+        
+        activityVC.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+            
+            // 如果錯誤存在，跳出錯誤視窗並顯示給使用者。
+            if error != nil {
+                self.showAlert(title: "Error", message: "Error:\(error!.localizedDescription)")
+                return
+            }
+            
+            // 如果發送成功，跳出提示視窗顯示成功。
+            if completed {
+                self.showAlert(title: "傳送成功", message: "傳送了我的QR Code")
+            }
+            
+        }
+        
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func showAlert(title:String,message:String) {
+        let alertController = UIAlertController(title: title, message: message , preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     
 }
 

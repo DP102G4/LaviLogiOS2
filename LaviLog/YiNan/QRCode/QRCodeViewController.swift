@@ -94,7 +94,9 @@ class QRCodeVC: UIViewController , AVCaptureMetadataOutputObjectsDelegate ,UIIma
         let size = 300
         let sWidth = Int(view.frame.size.width)
         let xPos = (sWidth/2)-(size/2)
-        let scanRect = CGRect(x: CGFloat(xPos), y: 100 , width: CGFloat(size) , height: CGFloat(size))
+        
+        // y = 框的高度
+        let scanRect = CGRect(x: CGFloat(xPos), y: 150 , width: CGFloat(size) , height: CGFloat(size))
         //設定scan Area window 框框
         let scanAreaView = UIView()
         scanAreaView.layer.borderColor = UIColor.gray.cgColor
@@ -122,6 +124,11 @@ class QRCodeVC: UIViewController , AVCaptureMetadataOutputObjectsDelegate ,UIIma
             codeTextLabel.text = stringValue
             //存取QRcodeURL
             QRCodeString = stringValue
+            
+            //若是掃描到QRCode 開啟加好友畫面
+            if let controller = storyboard?.instantiateViewController(withIdentifier: "qr2") {
+                present(controller, animated: true, completion: nil)
+            }
             
         }
     }
@@ -155,35 +162,34 @@ class QRCodeVC: UIViewController , AVCaptureMetadataOutputObjectsDelegate ,UIIma
         codeTextLabel.text = qrCodeLink
         QRCodeString = qrCodeLink
         picker.dismiss(animated: true, completion: nil)
+        
+        //若是使用相簿掃描到QRCode 開啟加好友畫面
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "qr2") {
+            present(controller, animated: true, completion: nil)
+        }
     }
     
-    //開啟網頁
+    //手動開啟
     @IBAction func openWebButton(_ sender: Any) {
-        let url = URL(string:QRCodeString)
-        let safariVC = SFSafariViewController(url: url!)
+//        let url = URL(string:QRCodeString)
+//        let safariVC = SFSafariViewController(url: url!)
+//
+//        present(safariVC,animated: true ,completion: nil)
         
-        present(safariVC,animated: true ,completion: nil)
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "qr2") {
+            present(controller, animated: true, completion: nil)
+        }
     }
     
     //清空codeTextLabel
     @IBAction func removeQRCode(_ sender: Any) {
        
-      let a = codeTextLabel.text
-        if a != "掃描結果" {
+      let scaQrcode = codeTextLabel.text
+        if scaQrcode != "掃描結果" {
             codeTextLabel.text = "掃描結果"
 
         }
     
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

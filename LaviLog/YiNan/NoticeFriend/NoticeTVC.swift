@@ -138,10 +138,10 @@ class NoticeTVC: UITableViewController {
     /* 設定可否編輯資料列 */
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         
-        //         if indexPath.row == 1{
-        //             return false
-        //         }
-        //         //使第二個資料無法修改
+//                 if indexPath.row == 1{
+//                     return false
+//                 }
+//                 //使第二個資料無法修改
         
         return true
     }

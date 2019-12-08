@@ -16,23 +16,30 @@ class FriendHomeVC: UIViewController {
     @IBOutlet weak var lbGmail: UILabel!
     
     var db : Firestore!
+    
+    //實體化一個Users物件
     var user = Users()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 使變數account等於登入的帳號
         if let account = Auth.auth().currentUser!.email {
+            // 使畫面的gmail等於登入的gmail
             lbGmail.text = account
             db = Firestore.firestore()
+            
+            // 取得登入帳號的方法
             loadFireStore()
         }
     }
     
+    // 取得登入相片的方法
     override func viewWillAppear(_ animated: Bool) {
         downloadPhoto()
     }
     
-    //取得登入帳號
+    // 取得登入帳號
     func loadFireStore() {
         // 建立儲藏庫實體
         db.collection("users").whereField("account", isEqualTo: Auth.auth().currentUser!.email).getDocuments { (snapshot, error) in

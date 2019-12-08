@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+// SearchBar 要加 UISearchBarDelegate ！！
 class SearchFriendVC: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -63,11 +64,16 @@ class SearchFriendVC: UIViewController, UISearchBarDelegate {
         getFriends()
     }
     
-    // 點擊鍵盤上的Search按鈕時將鍵盤隱藏
+    // 點擊鍵盤上的Search按鈕時呼叫
+    // 可以執⾏searchBar.resignFirstResponder()將鍵盤隱藏
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        // 點擊鍵盤上的Search按鈕時將鍵盤隱藏
         searchBar.resignFirstResponder()
     }
     
+    // 當UISearchBar元件輸入的⽂字改變時呼叫
+    // 依照輸入的關鍵字，原始資料array呼叫filter(_:)得到搜尋結果array提供給Table View呈現使⽤
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let text = searchBar.text ?? ""
         // 如果搜尋條件為空字串，就顯示原始資料；否則就顯示搜尋後結果
@@ -85,8 +91,11 @@ class SearchFriendVC: UIViewController, UISearchBarDelegate {
     
 }
 
+// 接續UIViewController使用UITableView
 extension SearchFriendVC: UITableViewDataSource, UITableViewDelegate {
+    // 定義⼀個區塊的列數
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //如果搜尋顯示搜尋結果否則顯示好友
         if search {
             return searchFriends.count
         } else {
@@ -94,6 +103,7 @@ extension SearchFriendVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    // 將資料顯⽰在儲存格上
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var friend:Friend?
         
@@ -102,6 +112,11 @@ extension SearchFriendVC: UITableViewDataSource, UITableViewDelegate {
         } else {
             friend = friends[indexPath.row]
         }
+        
+        // UITableViewCell的Style屬性設定為Subtitle，
+        // 也可以程式碼設定detailTextLabel屬性來改變每⼀筆資料的副標⽂字。
+        
+        // 程式碼設定UITableViewCell的textLabel、imageView屬性來改變每⼀筆資料的主標與圖片
         let cellId = "friendCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! FriendCell
         
@@ -112,8 +127,12 @@ extension SearchFriendVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    //覆寫tableView(_ tableView: UITableView, didSelectRowAt indexPath:IndexPath)
+    //點選儲存格時會呼叫
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         /* Identifier必須設定與Indentity inspector的Storyboard ID相同 */
+        
+        //使⽤「as!」轉型成⽬的⾴⾯類型後將欲傳遞的值指派給該⾴屬性
         let searchFriendResultVC = self.storyboard?.instantiateViewController(withIdentifier: "searchFriendResultVC") as! SearchFriendResultVC
         let friend = friends[indexPath.row]
         searchFriendResultVC.friend = friend
