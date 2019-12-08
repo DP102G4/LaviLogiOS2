@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E88A021239BCF580083B2E7 /* BackStage_main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E88A020239BCF580083B2E7 /* BackStage_main.storyboard */; };
+		4EDA7BB02397696300A6AAE6 /* CommodityDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA7BAB2397695A00A6AAE6 /* CommodityDetailVC.swift */; };
+		4EDA7BB12397696300A6AAE6 /* CommodityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA7BAC2397695C00A6AAE6 /* CommodityTableViewController.swift */; };
+		4EDA7BB22397696300A6AAE6 /* Commodity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA7BAD2397695E00A6AAE6 /* Commodity.swift */; };
+		4EDA7BB32397696300A6AAE6 /* Home_Lin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA7BAE2397696100A6AAE6 /* Home_Lin.storyboard */; };
+		4EDA7BB42397696300A6AAE6 /* CommodityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA7BAF2397696300A6AAE6 /* CommodityTableViewCell.swift */; };
 		522A3FCF23965E3900EE7F69 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A3FCE23965E3900EE7F69 /* UserCell.swift */; };
 		522A3FD12396607500EE7F69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A3FD02396607500EE7F69 /* User.swift */; };
 		524B885C23979F1900BC5BE7 /* QRCodeUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B885B23979F1900BC5BE7 /* QRCodeUserVC.swift */; };
@@ -52,20 +58,25 @@
 		A30F4CEB2388CAAE0065E85C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30F4CE92388CAAE0065E85C /* LaunchScreen.storyboard */; };
 		A30F4CF32388CAE20065E85C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A30F4CF22388CAE20065E85C /* GoogleService-Info.plist */; };
 		C0315EFED042E555B0636CEE /* Pods_LaviLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6F726D3107DC7326E0D1 /* Pods_LaviLog.framework */; };
+		E25B13232397694F003C27E4 /* Daily_Storyboard_K.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */; };
 		E287846323963843002C11A0 /* Answer_Daily_K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846023963843002C11A0 /* Answer_Daily_K.swift */; };
 		E287846423963843002C11A0 /* Question_Daily_K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846123963843002C11A0 /* Question_Daily_K.swift */; };
 		E287846523963843002C11A0 /* SearchDailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846223963843002C11A0 /* SearchDailyTableViewCell.swift */; };
 		E287846B23963887002C11A0 /* SearchDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846723963887002C11A0 /* SearchDailyViewController.swift */; };
 		E287846C23963887002C11A0 /* DailyPage2ViewController_K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846823963887002C11A0 /* DailyPage2ViewController_K.swift */; };
 		E287846D23963887002C11A0 /* DaiyInsert_ViewController_K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846923963887002C11A0 /* DaiyInsert_ViewController_K.swift */; };
-		E287846E23963887002C11A0 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846A23963887002C11A0 /* DateTableViewCell.swift */; };
-		E2878472239638D1002C11A0 /* Daily_Storyboard_K.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2878470239638D1002C11A0 /* Daily_Storyboard_K.storyboard */; };
 		E2878473239638D1002C11A0 /* Home_Storyboard_K.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2878471239638D1002C11A0 /* Home_Storyboard_K.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1545BC26871D2C28A99594E3 /* Pods-LaviLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaviLog.debug.xcconfig"; path = "Target Support Files/Pods-LaviLog/Pods-LaviLog.debug.xcconfig"; sourceTree = "<group>"; };
 		239B829599FFAA741B2151EE /* Pods-LaviLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaviLog.release.xcconfig"; path = "Target Support Files/Pods-LaviLog/Pods-LaviLog.release.xcconfig"; sourceTree = "<group>"; };
+		4E88A020239BCF580083B2E7 /* BackStage_main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BackStage_main.storyboard; sourceTree = "<group>"; };
+		4EDA7BAB2397695A00A6AAE6 /* CommodityDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommodityDetailVC.swift; sourceTree = "<group>"; };
+		4EDA7BAC2397695C00A6AAE6 /* CommodityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommodityTableViewController.swift; sourceTree = "<group>"; };
+		4EDA7BAD2397695E00A6AAE6 /* Commodity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commodity.swift; sourceTree = "<group>"; };
+		4EDA7BAE2397696100A6AAE6 /* Home_Lin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home_Lin.storyboard; sourceTree = "<group>"; };
+		4EDA7BAF2397696300A6AAE6 /* CommodityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommodityTableViewCell.swift; sourceTree = "<group>"; };
 		522A3FCE23965E3900EE7F69 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		522A3FD02396607500EE7F69 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		524B885B23979F1900BC5BE7 /* QRCodeUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeUserVC.swift; sourceTree = "<group>"; };
@@ -113,14 +124,13 @@
 		A30F4CEA2388CAAE0065E85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30F4CEC2388CAAE0065E85C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30F4CF22388CAE20065E85C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Daily_Storyboard_K.storyboard; sourceTree = "<group>"; };
 		E287846023963843002C11A0 /* Answer_Daily_K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer_Daily_K.swift; sourceTree = "<group>"; };
 		E287846123963843002C11A0 /* Question_Daily_K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question_Daily_K.swift; sourceTree = "<group>"; };
 		E287846223963843002C11A0 /* SearchDailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDailyTableViewCell.swift; sourceTree = "<group>"; };
 		E287846723963887002C11A0 /* SearchDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDailyViewController.swift; sourceTree = "<group>"; };
 		E287846823963887002C11A0 /* DailyPage2ViewController_K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyPage2ViewController_K.swift; sourceTree = "<group>"; };
 		E287846923963887002C11A0 /* DaiyInsert_ViewController_K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaiyInsert_ViewController_K.swift; sourceTree = "<group>"; };
-		E287846A23963887002C11A0 /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
-		E2878470239638D1002C11A0 /* Daily_Storyboard_K.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Daily_Storyboard_K.storyboard; sourceTree = "<group>"; };
 		E2878471239638D1002C11A0 /* Home_Storyboard_K.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home_Storyboard_K.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +153,35 @@
 				239B829599FFAA741B2151EE /* Pods-LaviLog.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4EDA7BA82397690F00A6AAE6 /* Lin */ = {
+			isa = PBXGroup;
+			children = (
+				4EDA7BAA2397694800A6AAE6 /* BackStage */,
+				4EDA7BA92397694000A6AAE6 /* Commodity */,
+			);
+			name = Lin;
+			path = lavilogImage/Lin;
+			sourceTree = "<group>";
+		};
+		4EDA7BA92397694000A6AAE6 /* Commodity */ = {
+			isa = PBXGroup;
+			children = (
+				4EDA7BAD2397695E00A6AAE6 /* Commodity.swift */,
+				4EDA7BAB2397695A00A6AAE6 /* CommodityDetailVC.swift */,
+				4EDA7BAF2397696300A6AAE6 /* CommodityTableViewCell.swift */,
+				4EDA7BAC2397695C00A6AAE6 /* CommodityTableViewController.swift */,
+				4EDA7BAE2397696100A6AAE6 /* Home_Lin.storyboard */,
+			);
+			path = Commodity;
+			sourceTree = "<group>";
+		};
+		4EDA7BAA2397694800A6AAE6 /* BackStage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BackStage;
 			sourceTree = "<group>";
 		};
 		528022ED239550DE008777B0 /* NoticeFriend */ = {
@@ -279,6 +318,8 @@
 				A30F4CE02388CAAC0065E85C /* SceneDelegate.swift */,
 				A30F4CE22388CAAC0065E85C /* ViewController.swift */,
 				A3038ED72396476F0013EE64 /* Main.storyboard */,
+				4E88A020239BCF580083B2E7 /* BackStage_main.storyboard */,
+				4EDA7BA82397690F00A6AAE6 /* Lin */,
 				A3038EB4239646EA0013EE64 /* JheJhen */,
 				5281E51C238D166400C5E554 /* Kao */,
 				5281E53F238D176700C5E554 /* YiNan */,
@@ -306,7 +347,6 @@
 				E287846723963887002C11A0 /* SearchDailyViewController.swift */,
 				E287846823963887002C11A0 /* DailyPage2ViewController_K.swift */,
 				E287846923963887002C11A0 /* DaiyInsert_ViewController_K.swift */,
-				E287846A23963887002C11A0 /* DateTableViewCell.swift */,
 			);
 			path = Controller_Daily_K;
 			sourceTree = "<group>";
@@ -314,7 +354,7 @@
 		E287846F239638D1002C11A0 /* View_Daily_K */ = {
 			isa = PBXGroup;
 			children = (
-				E2878470239638D1002C11A0 /* Daily_Storyboard_K.storyboard */,
+				E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */,
 				E2878471239638D1002C11A0 /* Home_Storyboard_K.storyboard */,
 			);
 			path = View_Daily_K;
@@ -381,17 +421,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5281E529238D16CC00C5E554 /* iu.jpeg in Resources */,
+				4EDA7BB32397696300A6AAE6 /* Home_Lin.storyboard in Resources */,
 				5281E528238D16CC00C5E554 /* background.png in Resources */,
 				A30F4CEB2388CAAE0065E85C /* LaunchScreen.storyboard in Resources */,
 				A30F4CF32388CAE20065E85C /* GoogleService-Info.plist in Resources */,
 				5281E527238D16CC00C5E554 /* swift.png in Resources */,
 				A3038ED22396471F0013EE64 /* MyAccountStoryboard.storyboard in Resources */,
+				4E88A021239BCF580083B2E7 /* BackStage_main.storyboard in Resources */,
 				5281E53D238D175800C5E554 /* YiNan.storyboard in Resources */,
 				A3038ED82396476F0013EE64 /* Main.storyboard in Resources */,
 				A30F4CE82388CAAE0065E85C /* Assets.xcassets in Resources */,
 				E2878473239638D1002C11A0 /* Home_Storyboard_K.storyboard in Resources */,
-				E2878472239638D1002C11A0 /* Daily_Storyboard_K.storyboard in Resources */,
 				A3038ED42396471F0013EE64 /* backStage.storyboard in Resources */,
+				E25B13232397694F003C27E4 /* Daily_Storyboard_K.storyboard in Resources */,
 				5281E52A238D16CC00C5E554 /* ios.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,14 +493,17 @@
 				524B885C23979F1900BC5BE7 /* QRCodeUserVC.swift in Sources */,
 				E287846E23963887002C11A0 /* DateTableViewCell.swift in Sources */,
 				5281E539238D173100C5E554 /* SearchFriendVC.swift in Sources */,
+				4EDA7BB22397696300A6AAE6 /* Commodity.swift in Sources */,
 				A3038ECB2396471F0013EE64 /* userListCell.swift in Sources */,
 				522A3FCF23965E3900EE7F69 /* UserCell.swift in Sources */,
 				A3038EC82396471F0013EE64 /* editPhotoVC.swift in Sources */,
 				A3038ED62396471F0013EE64 /* admListTVC.swift in Sources */,
 				A3038ECC2396471F0013EE64 /* MyProfileTVC.swift in Sources */,
 				A3038ED52396471F0013EE64 /* signUpVC.swift in Sources */,
+				4EDA7BB02397696300A6AAE6 /* CommodityDetailVC.swift in Sources */,
 				A3038ED32396471F0013EE64 /* ordersVC.swift in Sources */,
 				A3038ECD2396471F0013EE64 /* ordersTVCell.swift in Sources */,
+				4EDA7BB42397696300A6AAE6 /* CommodityTableViewCell.swift in Sources */,
 				5281E537238D173100C5E554 /* Friend.swift in Sources */,
 				5281E536238D173100C5E554 /* SearchFriendResultVC.swift in Sources */,
 				A30F4CE32388CAAC0065E85C /* ViewController.swift in Sources */,
@@ -478,6 +523,7 @@
 				E287846C23963887002C11A0 /* DailyPage2ViewController_K.swift in Sources */,
 				A3038ED12396471F0013EE64 /* signUpPhoneVC.swift in Sources */,
 				52B3B1D7239561F1009E66AB /* NoticeCell.swift in Sources */,
+				4EDA7BB12397696300A6AAE6 /* CommodityTableViewController.swift in Sources */,
 				5281E538238D173100C5E554 /* FriendCell.swift in Sources */,
 				5281E52F238D170E00C5E554 /* SearchUserResultVC.swift in Sources */,
 				E287846323963843002C11A0 /* Answer_Daily_K.swift in Sources */,
