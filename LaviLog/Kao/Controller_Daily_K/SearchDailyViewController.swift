@@ -33,6 +33,7 @@ class SearchDailyViewController: UIViewController,UITableViewDelegate,UITableVie
                 self.articles = querySnapshot.documents
                 self.searchTV.reloadData()
                 print(self.articles.count)
+                print("112233")
             }
         }
     }
@@ -114,3 +115,4 @@ class SearchDailyViewController: UIViewController,UITableViewDelegate,UITableVie
 
    
 }
+
