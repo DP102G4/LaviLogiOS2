@@ -64,9 +64,9 @@
 		A34994E5239DECDE00012FCE /* backStage_User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34994CF239DECDE00012FCE /* backStage_User.storyboard */; };
 		A34994E6239DECDE00012FCE /* admListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34994D0239DECDE00012FCE /* admListCell.swift */; };
 		A34994F5239DEE7C00012FCE /* loadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A34994F4239DEE7C00012FCE /* loadingView.xib */; };
-		A3499500239E15E900012FCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; };
-		A3499501239E15E900012FCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3499505239E16E400012FCE /* backStage_Adm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3499504239E16E400012FCE /* backStage_Adm.storyboard */; };
+		A350C805239E268B00ACDE58 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; };
+		A350C806239E268B00ACDE58 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0315EFED042E555B0636CEE /* Pods_LaviLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6F726D3107DC7326E0D1 /* Pods_LaviLog.framework */; };
 		E25B13232397694F003C27E4 /* Daily_Storyboard_K.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */; };
 		E262E917239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E916239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift */; };
@@ -98,13 +98,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A3499502239E15E900012FCE /* Embed Frameworks */ = {
+		A350C807239E268B00ACDE58 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A3499501239E15E900012FCE /* Charts.framework in Embed Frameworks */,
+				A350C806239E268B00ACDE58 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,7 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A34994B4239DEAC900012FCE /* Accelerate.framework in Frameworks */,
-				A3499500239E15E900012FCE /* Charts.framework in Frameworks */,
+				A350C805239E268B00ACDE58 /* Charts.framework in Frameworks */,
 				A34994B2239DEABC00012FCE /* FacebookLogin in Frameworks */,
 				C0315EFED042E555B0636CEE /* Pods_LaviLog.framework in Frameworks */,
 			);
@@ -473,7 +473,7 @@
 				A30F4CD92388CAAC0065E85C /* Resources */,
 				6DFE6B1AB0E8DFA0C7A7B69D /* [CP] Embed Pods Frameworks */,
 				B55DBBE03AE75D166F11D418 /* [CP] Copy Pods Resources */,
-				A3499502239E15E900012FCE /* Embed Frameworks */,
+				A350C807239E268B00ACDE58 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
