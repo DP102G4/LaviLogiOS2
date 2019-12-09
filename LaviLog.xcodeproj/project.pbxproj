@@ -66,7 +66,6 @@
 		A34994F1239DEDE200012FCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; };
 		A34994F2239DEDE200012FCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A34994F5239DEE7C00012FCE /* loadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A34994F4239DEE7C00012FCE /* loadingView.xib */; };
-		A34994F7239DF7A200012FCE /* backStage_Adm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34994F6239DF7A200012FCE /* backStage_Adm.storyboard */; };
 		C0315EFED042E555B0636CEE /* Pods_LaviLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6F726D3107DC7326E0D1 /* Pods_LaviLog.framework */; };
 		E25B13232397694F003C27E4 /* Daily_Storyboard_K.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */; };
 		E262E917239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E916239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift */; };
@@ -174,7 +173,6 @@
 		A34994D0239DECDE00012FCE /* admListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = admListCell.swift; sourceTree = "<group>"; };
 		A34994E8239DED9F00012FCE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		A34994F4239DEE7C00012FCE /* loadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = loadingView.xib; path = ../../../loadingView.xib; sourceTree = "<group>"; };
-		A34994F6239DF7A200012FCE /* backStage_Adm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = backStage_Adm.storyboard; sourceTree = "<group>"; };
 		E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Daily_Storyboard_K.storyboard; sourceTree = "<group>"; };
 		E262E916239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Album_K_CollectionViewController.swift; sourceTree = "<group>"; };
 		E262E918239DDF110023F2D7 /* Daily_Album_K_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Album_K_CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -413,7 +411,6 @@
 				A34994CC239DECDE00012FCE /* userListCell.swift */,
 				A34994CD239DECDE00012FCE /* ordersTVCell.swift */,
 				A34994CE239DECDE00012FCE /* MyAccountStoryboard.storyboard */,
-				A34994F6239DF7A200012FCE /* backStage_Adm.storyboard */,
 				A34994CF239DECDE00012FCE /* backStage_User.storyboard */,
 				A34994D0239DECDE00012FCE /* admListCell.swift */,
 			);
@@ -566,7 +563,6 @@
 				E2878473239638D1002C11A0 /* Home_Storyboard_K.storyboard in Resources */,
 				E25B13232397694F003C27E4 /* Daily_Storyboard_K.storyboard in Resources */,
 				5281E52A238D16CC00C5E554 /* ios.png in Resources */,
-				A34994F7239DF7A200012FCE /* backStage_Adm.storyboard in Resources */,
 				A34994E4239DECDE00012FCE /* MyAccountStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
