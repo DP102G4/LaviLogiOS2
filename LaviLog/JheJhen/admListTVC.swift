@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-
+//
 class admListTVC: UITableViewController {
     let db = Firestore.firestore()
     var adms = [Users]()
@@ -73,3 +73,5 @@ class admListTVC: UITableViewController {
         }
     }
 }
+//
+
