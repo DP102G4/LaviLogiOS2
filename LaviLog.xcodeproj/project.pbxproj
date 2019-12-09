@@ -63,9 +63,10 @@
 		A34994E4239DECDE00012FCE /* MyAccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34994CE239DECDE00012FCE /* MyAccountStoryboard.storyboard */; };
 		A34994E5239DECDE00012FCE /* backStage_User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34994CF239DECDE00012FCE /* backStage_User.storyboard */; };
 		A34994E6239DECDE00012FCE /* admListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34994D0239DECDE00012FCE /* admListCell.swift */; };
-		A34994F1239DEDE200012FCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; };
-		A34994F2239DEDE200012FCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A34994F5239DEE7C00012FCE /* loadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A34994F4239DEE7C00012FCE /* loadingView.xib */; };
+		A3499500239E15E900012FCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; };
+		A3499501239E15E900012FCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A34994EE239DED9F00012FCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A3499505239E16E400012FCE /* backStage_Adm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3499504239E16E400012FCE /* backStage_Adm.storyboard */; };
 		C0315EFED042E555B0636CEE /* Pods_LaviLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6F726D3107DC7326E0D1 /* Pods_LaviLog.framework */; };
 		E25B13232397694F003C27E4 /* Daily_Storyboard_K.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */; };
 		E262E917239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E916239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift */; };
@@ -97,13 +98,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A34994F3239DEDE200012FCE /* Embed Frameworks */ = {
+		A3499502239E15E900012FCE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A34994F2239DEDE200012FCE /* Charts.framework in Embed Frameworks */,
+				A3499501239E15E900012FCE /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +174,7 @@
 		A34994D0239DECDE00012FCE /* admListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = admListCell.swift; sourceTree = "<group>"; };
 		A34994E8239DED9F00012FCE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		A34994F4239DEE7C00012FCE /* loadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = loadingView.xib; path = ../../../loadingView.xib; sourceTree = "<group>"; };
+		A3499504239E16E400012FCE /* backStage_Adm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = backStage_Adm.storyboard; sourceTree = "<group>"; };
 		E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Daily_Storyboard_K.storyboard; sourceTree = "<group>"; };
 		E262E916239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Album_K_CollectionViewController.swift; sourceTree = "<group>"; };
 		E262E918239DDF110023F2D7 /* Daily_Album_K_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Album_K_CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A34994B4239DEAC900012FCE /* Accelerate.framework in Frameworks */,
-				A34994F1239DEDE200012FCE /* Charts.framework in Frameworks */,
+				A3499500239E15E900012FCE /* Charts.framework in Frameworks */,
 				A34994B2239DEABC00012FCE /* FacebookLogin in Frameworks */,
 				C0315EFED042E555B0636CEE /* Pods_LaviLog.framework in Frameworks */,
 			);
@@ -412,6 +414,7 @@
 				A34994CD239DECDE00012FCE /* ordersTVCell.swift */,
 				A34994CE239DECDE00012FCE /* MyAccountStoryboard.storyboard */,
 				A34994CF239DECDE00012FCE /* backStage_User.storyboard */,
+				A3499504239E16E400012FCE /* backStage_Adm.storyboard */,
 				A34994D0239DECDE00012FCE /* admListCell.swift */,
 			);
 			path = View;
@@ -470,7 +473,7 @@
 				A30F4CD92388CAAC0065E85C /* Resources */,
 				6DFE6B1AB0E8DFA0C7A7B69D /* [CP] Embed Pods Frameworks */,
 				B55DBBE03AE75D166F11D418 /* [CP] Copy Pods Resources */,
-				A34994F3239DEDE200012FCE /* Embed Frameworks */,
+				A3499502239E15E900012FCE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -549,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5281E529238D16CC00C5E554 /* iu.jpeg in Resources */,
+				A3499505239E16E400012FCE /* backStage_Adm.storyboard in Resources */,
 				4EDA7BB32397696300A6AAE6 /* Home_Lin.storyboard in Resources */,
 				5281E528238D16CC00C5E554 /* background.png in Resources */,
 				A34994E5239DECDE00012FCE /* backStage_User.storyboard in Resources */,
