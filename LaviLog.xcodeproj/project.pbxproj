@@ -59,6 +59,8 @@
 		A34994A4239D046B00012FCE /* QRCodeUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34994A3239D046B00012FCE /* QRCodeUserVC.swift */; };
 		C0315EFED042E555B0636CEE /* Pods_LaviLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6F726D3107DC7326E0D1 /* Pods_LaviLog.framework */; };
 		E25B13232397694F003C27E4 /* Daily_Storyboard_K.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */; };
+		E262E917239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E916239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift */; };
+		E262E919239DDF110023F2D7 /* Daily_Album_K_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E918239DDF110023F2D7 /* Daily_Album_K_CollectionViewCell.swift */; };
 		E287846323963843002C11A0 /* Answer_Daily_K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846023963843002C11A0 /* Answer_Daily_K.swift */; };
 		E287846423963843002C11A0 /* Question_Daily_K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846123963843002C11A0 /* Question_Daily_K.swift */; };
 		E287846523963843002C11A0 /* SearchDailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287846223963843002C11A0 /* SearchDailyTableViewCell.swift */; };
@@ -125,6 +127,8 @@
 		A30F4CF22388CAE20065E85C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A34994A3239D046B00012FCE /* QRCodeUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeUserVC.swift; sourceTree = "<group>"; };
 		E25B13222397694F003C27E4 /* Daily_Storyboard_K.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Daily_Storyboard_K.storyboard; sourceTree = "<group>"; };
+		E262E916239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Album_K_CollectionViewController.swift; sourceTree = "<group>"; };
+		E262E918239DDF110023F2D7 /* Daily_Album_K_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Album_K_CollectionViewCell.swift; sourceTree = "<group>"; };
 		E287846023963843002C11A0 /* Answer_Daily_K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer_Daily_K.swift; sourceTree = "<group>"; };
 		E287846123963843002C11A0 /* Question_Daily_K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question_Daily_K.swift; sourceTree = "<group>"; };
 		E287846223963843002C11A0 /* SearchDailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDailyTableViewCell.swift; sourceTree = "<group>"; };
@@ -335,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				E287846023963843002C11A0 /* Answer_Daily_K.swift */,
+				E262E918239DDF110023F2D7 /* Daily_Album_K_CollectionViewCell.swift */,
 				E287846123963843002C11A0 /* Question_Daily_K.swift */,
 				E287846223963843002C11A0 /* SearchDailyTableViewCell.swift */,
 			);
@@ -345,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				E287846723963887002C11A0 /* SearchDailyViewController.swift */,
+				E262E916239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift */,
 				E287846823963887002C11A0 /* DailyPage2ViewController_K.swift */,
 				E287846923963887002C11A0 /* DaiyInsert_ViewController_K.swift */,
 			);
@@ -515,6 +521,7 @@
 				A3038EC92396471F0013EE64 /* forgotPWVC.swift in Sources */,
 				528022EC239550D8008777B0 /* NoticeTVC.swift in Sources */,
 				A3038ECA2396471F0013EE64 /* myAccountTVC.swift in Sources */,
+				E262E919239DDF110023F2D7 /* Daily_Album_K_CollectionViewCell.swift in Sources */,
 				5281E521238D16BF00C5E554 /* QRCodeViewController.swift in Sources */,
 				522A3FD12396607500EE7F69 /* User.swift in Sources */,
 				A3038EC62396471F0013EE64 /* Users.swift in Sources */,
@@ -529,6 +536,7 @@
 				E287846523963843002C11A0 /* SearchDailyTableViewCell.swift in Sources */,
 				A3038EC72396471F0013EE64 /* signInVC.swift in Sources */,
 				A3038ECE2396471F0013EE64 /* userListVC.swift in Sources */,
+				E262E917239DDED60023F2D7 /* Daily_Album_K_CollectionViewController.swift in Sources */,
 				A3038ECF2396471F0013EE64 /* changePasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,8 @@ class SearchDailyTableViewCell: UITableViewCell {
     @IBOutlet weak var ivDaily: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var answerTextView: UITextView!
+  
+    @IBOutlet weak var answerLabel: UILabel!
     
     @IBOutlet weak var questionTextFiled: UILabel!
     

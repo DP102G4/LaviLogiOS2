@@ -66,8 +66,12 @@ class DaiyInsert_ViewController_K: UIViewController,UITextFieldDelegate,UIImageP
     
     var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     
+    //宣告取得登入帳號
+    var db: Firestore!
+    var user = Users()
+    var accounts = ""
     
-   
+    
     
     
     
@@ -75,17 +79,17 @@ class DaiyInsert_ViewController_K: UIViewController,UITextFieldDelegate,UIImageP
         super.viewDidLoad()
         
         
-       
+        //取得當入帳號
+        if let account = Auth.auth().currentUser!.email {
+            accounts = account
+            db = Firestore.firestore()
+            loadFireStore()
+        }
         
         //firebase
         self.storage = Storage.storage()
         
-        //匿名登入
-        Auth.auth().signInAnonymously { (user, error) in
-            if let error = error{
-                print("錯誤訊息：" + error.localizedDescription)
-            }
-        }
+        
         
         //顯示在畫面上的日期
         dateformatter.dateFormat = "yyyy/MM/dd"
@@ -143,12 +147,24 @@ class DaiyInsert_ViewController_K: UIViewController,UITextFieldDelegate,UIImageP
         
         
         
-        
+        print("Daiyinsert accounts : ",accounts)
         //viewDidLoad的尾
     }
     
+    //取得登入帳號方法
+    func loadFireStore() {
+        // 建立儲藏庫實體
+        db.collection("users").whereField("account", isEqualTo: Auth.auth().currentUser!.email!).getDocuments { (snapshot, error) in
+            if let snapshot = snapshot {
+                for document in snapshot.documents {
+                    self.user = Users(dic: document.data())
+                    //self.lbName.text = self.user.name!
+                }
+            }
+        }
+    }
     
-   
+    
     
     
     
@@ -156,8 +172,8 @@ class DaiyInsert_ViewController_K: UIViewController,UITextFieldDelegate,UIImageP
     //上傳照片的func
     func uploadPhoto(completion: @escaping (URL?) -> () ){
         let storageReference = Storage.storage().reference().child("images_daily/\(UUID().uuidString).png")
-        //將dailyInsertImageView，再轉成data(UIImage轉data)，壓縮品質0.9
-        if let data = dailyInsertImageView.image?.jpegData(compressionQuality: 0.9){
+        //將dailyInsertImageView，再轉成data(UIImage轉data)，壓縮品質0.3
+        if let data = dailyInsertImageView.image?.jpegData(compressionQuality: 0.3){
             storageReference.putData(data, metadata: nil) { (_, error) in
                 guard  error == nil  else {return}
                 storageReference.downloadURL { (url, error) in
@@ -173,8 +189,6 @@ class DaiyInsert_ViewController_K: UIViewController,UITextFieldDelegate,UIImageP
     
     
     
-    
-  
     //發佈
     @IBAction func btPostDaily(_ sender: UIBarButtonItem) {
         
@@ -186,7 +200,7 @@ class DaiyInsert_ViewController_K: UIViewController,UITextFieldDelegate,UIImageP
         self.activityIndicator.startAnimating()
         UIApplication.shared.beginReceivingRemoteControlEvents()
         
-       
+        
         
         
         uploadPhoto { (url) in
@@ -212,29 +226,37 @@ class DaiyInsert_ViewController_K: UIViewController,UITextFieldDelegate,UIImageP
                     }
                     postAlert.addAction(ok)
                     self.present(postAlert,animated: true,completion: nil)
-              
+                    
                     
                 }else{
                     
-       
+                    
                     
                     //新增日誌
                     self.ansTextField.resignFirstResponder()
                     let dailyDb = Firestore.firestore()
                     
-                    let data:[String:Any] = ["account":"帳號不知道","answer":self.ansTextField.text as Any,"day":strDay as Any,"id":"id不知道","imagePath":url.absoluteString,"month":strMonth,"question":self.todayQuestion.text as Any,"textClock":self.currentTime.text as Any,"year":strYear,"location":self.locationTextField.text as Any]
-                    var reference:DocumentReference?
+                    //以下測試
+                    var reference = self.db.collection("id").document()
+                    let id = reference.documentID
+                    
+                    //以上測試
+                    
+                    let data:[String:Any] = ["account":self.accounts,"answer":self.ansTextField.text as Any,"day":strDay as Any,"id":id,"imagePath":url.absoluteString,"month":strMonth,"question":self.todayQuestion.text as Any,"textClock":self.currentTime.text as Any,"year":strYear,"location":self.locationTextField.text as Any]
+                    //                    var reference:DocumentReference?
                     reference = dailyDb.collection("article").addDocument(data: data) {(error) in
                         if let error = error{
                             print(error)
                         }else{
-                            
-                            print(reference?.documentID as Any)
+                            //將document內的id欄位更改為firebase自動生成的documentID
+                            dailyDb.collection("article").document(reference.documentID).setData(["id":reference.documentID],merge: true)
+                            print(reference.documentID as Any)
                         }
                         
                     }
-                   
+                    
                     self.dismiss(animated: true, completion: nil)
+                    
                 }
                 
             }
@@ -262,7 +284,7 @@ class DaiyInsert_ViewController_K: UIViewController,UITextFieldDelegate,UIImageP
                 return
             }
             for placemark in placemarks!{
-                self.locationTextField.text = "\(placemark.name!)" 
+                self.locationTextField.text = "\(placemark.name!)"
             }
         }
         
