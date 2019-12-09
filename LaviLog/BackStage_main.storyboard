@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sL9-iG-b7I">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="e0W-G3-JTN">
             <objects>
-                <viewController id="sL9-iG-b7I" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="sL9-iG-b7I" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aWD-LY-eK6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="023-Hn-XiH" kind="show" id="KIl-KR-rBB"/>
+                                            <segue destination="U5b-MZ-goM" kind="presentation" modalPresentationStyle="fullScreen" id="FwZ-Iv-mx4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNU-Rf-b1z">
@@ -44,6 +44,9 @@
                                         <state key="normal" title="使用者管理">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="FIR-9R-VnC" kind="presentation" modalPresentationStyle="fullScreen" id="iuI-og-0Cn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAF-5x-VZC">
                                         <rect key="frame" x="0.0" y="212" width="300" height="36"/>
@@ -82,32 +85,59 @@
             </objects>
             <point key="canvasLocation" x="150.72463768115944" y="127.90178571428571"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="vdT-I5-xGG">
-            <objects>
-                <navigationController id="023-Hn-XiH" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="IiJ-CK-XaO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k00-4l-8Ms">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="WkX-DJ-3cB" kind="relationship" relationship="rootViewController" id="Vwl-dW-nqA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="of6-ny-xtR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1123" y="-509"/>
-        </scene>
-        <!--Storyboard Reference-->
+        <!--backStage_Adm-->
         <scene sceneID="Bbr-jP-Dwf">
             <objects>
-                <viewControllerPlaceholder id="WkX-DJ-3cB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="backStage_Adm" id="WkX-DJ-3cB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="g74-YZ-9rR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8L-nS-SPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="-510"/>
+            <point key="canvasLocation" x="2515" y="40"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z34-jA-nsU">
+            <objects>
+                <navigationController id="U5b-MZ-goM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="V2A-F7-ShH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Wb-m5-z9b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WkX-DJ-3cB" kind="relationship" relationship="rootViewController" id="oz0-3y-mfu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlD-Cv-lff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="68"/>
+        </scene>
+        <!--backStage_User-->
+        <scene sceneID="Fva-pP-6Ki">
+            <objects>
+                <viewControllerPlaceholder storyboardName="backStage_User" id="VfU-Tk-zl6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="d2M-Tv-M38"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYq-pO-eJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2514" y="457"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iTh-2c-790">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfK-30-bug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="FIR-9R-VnC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="esG-WL-ytC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JIf-e1-aX9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VfU-Tk-zl6" kind="relationship" relationship="rootViewController" id="bUy-UK-FdZ"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1771" y="749"/>
         </scene>
     </scenes>
 </document>
